@@ -70,14 +70,14 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
           width: fullWidth,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xff006F70),
-              Color(0xff008062),
-              Color(0xff2A9745),
-            ],
-          )),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xff006F70),
+                  Color(0xff008062),
+                  Color(0xff2A9745),
+                ],
+              )),
           child: Stack(children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -96,84 +96,84 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                         ),
                         isSearchingDone && isLogged
                             ? Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    "${cardSearch.length.toString()} Results for:",
-                                    style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    "' ${_textEditingController.text} '",
-                                    style: const TextStyle(
-                                        color: Colors.white, fontSize: 12),
-                                  ),
-                                ],
-                              )
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "${cardSearch.length.toString()} Results for:",
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "' ${_textEditingController.text} '",
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 12),
+                            ),
+                          ],
+                        )
                             : const SizedBox(),
                         isSearching
                             ? !isLogged
-                                ? Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "${userAttemps.toString()} attemps left. ",
-                                        style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Text(
-                                            "${cardSearch.length.toString()} Results for:",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          Text(
-                                            "' ${_textEditingController.text} '",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 12),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )
-                                : const SizedBox()
+                            ? Row(
+                          mainAxisAlignment:
+                          MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "${userAttemps.toString()} attemps left. ",
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Column(
+                              crossAxisAlignment:
+                              CrossAxisAlignment.end,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  "${cardSearch.length.toString()} Results for:",
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  "' ${_textEditingController.text} '",
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                            : const SizedBox()
                             : isLogged
-                                ? const Text(
-                                    "Make search using multiple key words for exact result",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 12),
-                                  )
-                                : Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "${userAttemps.toString()} attemps left. ",
-                                        style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const Text(
-                                        "Make search using multiple key words for \n exact result",
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 12),
-                                      ),
-                                    ],
-                                  ),
+                            ? const Text(
+                          "Make search using multiple key words for exact result",
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 12),
+                        )
+                            : Row(
+                          mainAxisAlignment:
+                          MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "${userAttemps.toString()} attemps left. ",
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const Text(
+                              "Make search using multiple key words for \n exact result",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 12),
+                            ),
+                          ],
+                        ),
                         const SizedBox(
                           height: 25,
                         ),
@@ -218,7 +218,7 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                       cursorColor: Colors.green.shade900,
                                       decoration: InputDecoration(
                                         floatingLabelBehavior:
-                                            FloatingLabelBehavior.never,
+                                        FloatingLabelBehavior.never,
                                         labelText: 'Search...',
                                         labelStyle: const TextStyle(
                                           color: Color(0xff5B5B5B),
@@ -228,7 +228,7 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                         alignLabelWithHint: true,
                                         border: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10.0),
+                                          BorderRadius.circular(10.0),
                                           borderSide: BorderSide.none,
                                         ),
                                       ),
@@ -248,7 +248,7 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                       decoration: BoxDecoration(
                                         color:  Colors.white,
                                         borderRadius:
-                                            BorderRadius.circular(10.0),
+                                        BorderRadius.circular(10.0),
                                       ),
                                       child: AnimatedBuilder(
                                           builder: (context, widget) {
@@ -281,7 +281,7 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                     icon: const Icon(Icons.search_rounded),
                                     onPressed: () {
                                       setState(
-                                        () {
+                                            () {
                                           if (toggle == 0) {
                                             toggle = 1;
                                             _con.forward();
@@ -346,157 +346,160 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                   const Expanded(
                     child: Center(
                         child: JumpingDots(
-                      numberOfDots: 7,
-                    )),
+                          numberOfDots: 7,
+                        )),
                   )
                 else if (isWaiting && !isSearching && cardSearch.isEmpty)
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        messageResponse,
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600),
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          messageResponse,
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
-                    ),
-                  )
-                else
-                  Expanded(
-                      child: Stack(
-                    children: [
-                      ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        itemCount: cardSearch.length,
-                        itemBuilder: (BuildContext ctx, index) {
-                          return GestureDetector(
-                            child: Column(
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(right: 20, left: 20),
-                                  child: Divider(
-                                    color: Colors.white,
-                                    thickness: 0.2,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      right: 10, left: 10),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    mainAxisSize: MainAxisSize.max,
+                    )
+                  else
+                    Expanded(
+                        child: Stack(
+                          children: [
+                            // .contains logic applied here.
+                            ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: cardSearch.length,
+                              itemBuilder: (BuildContext ctx, index) {
+                                return GestureDetector(
+                                  child: Column(
                                     children: [
-                                      Stack(
-                                        children: [
-                                          cardSearch[index].awsUrl == null ||
-                                                  cardSearch[index]
-                                                      .awsUrl!
-                                                      .isEmpty
-                                              ? Container(
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 20, left: 20),
+                                        child: Divider(
+                                          color: Colors.white,
+                                          thickness: 0.2,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 10, left: 10),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Stack(
+                                              children: [
+                                                cardSearch[index].awsUrl == null ||
+                                                    cardSearch[index]
+                                                        .awsUrl!
+                                                        .isEmpty
+                                                    ? Container(
                                                   height: 100,
                                                   width: 70,
                                                   decoration:
-                                                      const BoxDecoration(
-                                                          image:
-                                                              DecorationImage(
-                                                    image: AssetImage(
-                                                        'assets/images/auth/Sign_Up_BG_Image.jpg'),
-                                                    fit: BoxFit.fill,
-                                                  )),
-                                                )
-                                              : CachedNetworkImage(
-                                                  height: 100,
-                                                  width: 70,
-                                                  imageUrl:
-                                                      cardSearch[index].awsUrl!,
-                                                  placeholder: (context, url) =>
-                                                      const Center(
-                                                        child:
-                                                            CircularProgressIndicator(),
-                                                      ),
-                                                  errorWidget:
-                                                      (context, url, error) {
-                                                    return Center(
-                                                        child: Container(
-                                                      height: 100,
-                                                      width: 70,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              image:
-                                                                  DecorationImage(
+                                                  const BoxDecoration(
+                                                      image:
+                                                      DecorationImage(
                                                         image: AssetImage(
                                                             'assets/images/auth/Sign_Up_BG_Image.jpg'),
                                                         fit: BoxFit.fill,
                                                       )),
-                                                    ));
-                                                  }),
-                                          Positioned(
-                                              bottom: 2,
-                                              right: 2,
-                                              child: Container(
-                                                  decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              16),
-                                                      color: Colors.white),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            right: 8,
-                                                            left: 8,
-                                                            top: 2,
-                                                            bottom: 2),
-                                                    child: Text(
-                                                      "${cardSearch[index].grader}",
-                                                      style: const TextStyle(
-                                                          color: Colors.black),
+                                                )
+                                                    : CachedNetworkImage(
+                                                    height: 100,
+                                                    width: 70,
+                                                    // URL Images from AWS (added by Rehan)
+                                                    imageUrl:
+                                                    cardSearch[index].awsUrl!,
+                                                    placeholder: (context, url) =>
+                                                    const Center(
+                                                      child:
+                                                      CircularProgressIndicator(),
                                                     ),
-                                                  )))
-                                        ],
-                                      ),
-                                      Container(
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                .65,
-                                        margin: const EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          "${cardSearch[index].details}",
-                                          style: const TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white),
+                                                    errorWidget:
+                                                        (context, url, error) {
+                                                      return Center(
+                                                          child: Container(
+                                                            height: 100,
+                                                            width: 70,
+                                                            decoration:
+                                                            const BoxDecoration(
+                                                                image:
+                                                                DecorationImage(
+                                                                  image: AssetImage(
+                                                                      'assets/images/auth/Sign_Up_BG_Image.jpg'),
+                                                                  fit: BoxFit.fill,
+                                                                )),
+                                                          ));
+                                                    }),
+                                                Positioned(
+                                                    bottom: 2,
+                                                    right: 2,
+                                                    child: Container(
+                                                        decoration: BoxDecoration(
+                                                            borderRadius:
+                                                            BorderRadius.circular(
+                                                                16),
+                                                            color: Colors.white),
+                                                        child: Padding(
+                                                          padding:
+                                                          const EdgeInsets.only(
+                                                              right: 8,
+                                                              left: 8,
+                                                              top: 2,
+                                                              bottom: 2),
+                                                          child: Text(
+                                                            "${cardSearch[index].grader}",
+                                                            style: const TextStyle(
+                                                                color: Colors.black),
+                                                          ),
+                                                        )))
+                                              ],
+                                            ),
+                                            Container(
+                                              width:
+                                              MediaQuery.of(context).size.width *
+                                                  .65,
+                                              margin: const EdgeInsets.only(
+                                                  left: 10, right: 10),
+                                              child: Text(
+                                                "${cardSearch[index].details}",
+                                                style: const TextStyle(
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w700,
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                            const Icon(
+                                              Icons.arrow_forward_ios_rounded,
+                                              size: 25,
+                                              color: Colors.white,
+                                              semanticLabel: 'Icon',
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                      const Icon(
-                                        Icons.arrow_forward_ios_rounded,
-                                        size: 25,
-                                        color: Colors.white,
-                                        semanticLabel: 'Icon',
                                       ),
                                     ],
                                   ),
-                                ),
-                              ],
+                                  // Details Page added by Rehan.
+                                  onTap: () {
+                                    Navigator.of(context).push(MaterialPageRoute(
+                                        builder: (context) => PlayerPage(
+                                          card: cardSearch[index].details,
+                                          grader: cardSearch[index].grader,
+                                          awsImage: cardSearch[index].awsUrl,
+                                          cardId: cardSearch[index].gemrateId,
+                                        ),),);
+                                  },
+                                );
+                              },
                             ),
-                            onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => PlayerPage(
-                                        card: cardSearch[index].details,
-                                        grader: cardSearch[index].grader,
-                                        awsImage: cardSearch[index].awsUrl,
-                                        cardId: cardSearch[index].gemrateId,
-                                      )));
-                            },
-                          );
-                        },
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: isSearching && isWaiting
-                            ? Center(
+                            Align(
+                              alignment: Alignment.center,
+                              child: isSearching && isWaiting
+                                  ? Center(
                                 child: Container(
                                   padding: const EdgeInsets.all(8),
                                   margin: const EdgeInsets.all(8),
@@ -508,10 +511,10 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                       )),
                                 ),
                               )
-                            : const SizedBox(),
-                      )
-                    ],
-                  )),
+                                  : const SizedBox(),
+                            )
+                          ],
+                        )),
                 const SizedBox(
                   height: 25,
                 )

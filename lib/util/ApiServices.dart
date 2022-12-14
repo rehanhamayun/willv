@@ -1,5 +1,5 @@
 class ApiService {
-  static const apiUrl = 'http://localhost:5002/swagger/index.html';
+  static const apiUrl = 'https://localhost:5003/swagger';
   //static const apiUrl = 'https://www.pop-check.com/';
   static const imageUrl = "https://popcheckimages.s3.amazonaws.com/";
 

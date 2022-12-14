@@ -286,14 +286,10 @@ class _LoginPageState extends State<LoginPage> {
                                       isUserNameEmpty = false;
                                       isPasswordEmpty = false;
                                     });
-                                    if (await loginService(
-                                        username.text, password.text)) {
-                                      Navigator.of(context).pushAndRemoveUntil(
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const Home()),
-                                          (Route<dynamic> route) => false);
-                                    } else {
+
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
+
+                                      {
                                       setState(() {
                                         apiCallProgess = true;
                                         apiCircleProgess = false;
@@ -376,13 +372,14 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future<bool> loginService(String username, String password) async {
-    http.Response response;
+     http.Response response;
     response = await http.post(
         Uri.parse(ApiService.apiUrl + ApiService.auth + ApiService.login),
         body: {'Email': username, 'Password': password});
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
+      return data;
 
       prefs.setBool('isLogged', true);
       prefs.setString('accessToken', data['token']);
@@ -390,7 +387,7 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       setState(() {
         // responseMessage = response.body;
-        responseMessage = "Please check your email and password !";
+        responseMessage = "Invalid email and password !";
       });
       return false;
     }
